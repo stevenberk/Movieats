@@ -1,6 +1,9 @@
 var output = document.querySelector(".output");
 var movieGenre = document.querySelector(".movie-genre");
 
+let recipeGenrePoints = 0;
+
+
 var form = document
   .querySelector(".form")
   .addEventListener("submit", function(e) {
@@ -8,6 +11,9 @@ var form = document
     var input = document.querySelector(".main-input");
     getMoviesAPI(input.value);
   });
+
+
+
 
 
 let getMoviesAPI = (value) => {
@@ -22,7 +28,21 @@ $.ajax({
        let splitgenre = movie.Genre.split(",");
        console.log(splitgenre);
 
-       
+       if (splitgenre[0] == "Documentary"){
+            recipeGenrePoints = recipeGenrePoints + 10
+       }
+
+       if (splitgenre[0] == "Crime"){
+        recipeGenrePoints = recipeGenrePoints + 5
+        }
+        if (splitgenre[0] || splitgenre[1] == "Comedy"){
+            recipeGenrePoints = recipeGenrePoints + 8 
+        }
+       console.log(recipeGenrePoints);
+
+
+
+
         
     },
     error: function(error){
