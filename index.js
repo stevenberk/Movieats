@@ -1,4 +1,3 @@
-
 var output = document.querySelector(".output");
 var movieGenre = document.querySelector(".movie-genre");
 
@@ -19,6 +18,11 @@ $.ajax({
         console.log(movie.Genre)
         movieGenre.textContent = movie.Genre;
         output.setAttribute('class', 'show output');
+
+       let splitgenre = movie.Genre.split(",");
+       console.log(splitgenre);
+
+       
         
     },
     error: function(error){
