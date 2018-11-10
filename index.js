@@ -8,6 +8,11 @@ var form = document
   .querySelector(".form")
   .addEventListener("submit", function(e) {
     e.preventDefault();
+    
+    if (recipeGenrePoints > 0 ){
+        recipeGenrePoints = 0;
+    }
+
     var input = document.querySelector(".main-input");
     getMoviesAPI(input.value);
   });
@@ -35,14 +40,10 @@ $.ajax({
        if (splitgenre[0] == "Crime"){
         recipeGenrePoints = recipeGenrePoints + 5
         }
-        if (splitgenre[0] || splitgenre[1] == "Comedy"){
+        if (splitgenre[0] == "Comedy"){
             recipeGenrePoints = recipeGenrePoints + 8 
         }
        console.log(recipeGenrePoints);
-
-
-
-
         
     },
     error: function(error){
