@@ -8,11 +8,7 @@ var form = document
   .querySelector(".form")
   .addEventListener("submit", function(e) {
     e.preventDefault();
-    
-    if (recipeGenrePoints > 0 ){
-        recipeGenrePoints = 0;
-    }
-
+    recipeGenrePoints = 0;
     var input = document.querySelector(".main-input");
     getMoviesAPI(input.value);
   });
@@ -37,11 +33,29 @@ $.ajax({
             recipeGenrePoints = recipeGenrePoints + 10
        }
 
-       if (splitgenre[0] == "Crime"){
+        if (splitgenre[0] == "Crime"){
         recipeGenrePoints = recipeGenrePoints + 5
         }
         if (splitgenre[0] == "Comedy"){
+            recipeGenrePoints = recipeGenrePoints + 6 
+        }
+        if (splitgenre[0] == "Drama"){
+            recipeGenrePoints = recipeGenrePoints + 10 
+        }
+        if (splitgenre[0] == "Animation"){
+            recipeGenrePoints = recipeGenrePoints + 3 
+        }
+        if (splitgenre[0] == "Adventure"){
+            recipeGenrePoints = recipeGenrePoints + 3 
+        }
+        if (splitgenre[0] == "Action"){
+            recipeGenrePoints = recipeGenrePoints + 5 
+        }
+        if (splitgenre[0] == "Biography"){
             recipeGenrePoints = recipeGenrePoints + 8 
+        }
+        if (splitgenre[0] || splitgenre[1] || splitgenre[2] || splitgenre[3] || splitgenre[4] == "Sport"){
+            recipeGenrePoints = recipeGenrePoints - 2 
         }
        console.log(recipeGenrePoints);
         
