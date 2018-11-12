@@ -33,7 +33,7 @@ $.ajax({
             recipeGenrePoints = recipeGenrePoints + 10
        }
 
-        if (splitgenre[0] == "Crime"){
+        if (splitgenre[0] || splitgenre[1] || splitgenre[2] || splitgenre[3] == "Crime"){
         recipeGenrePoints = recipeGenrePoints + 5
         }
         if (splitgenre[0] == "Comedy"){
