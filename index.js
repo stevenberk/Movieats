@@ -22,11 +22,13 @@ $.ajax({
     type: "GET",
     url: `http://www.omdbapi.com/?i=tt3896198&apikey=6c8e631&t=${value}`,
     success: function(movie){
-        console.log(movie.Genre)
+        // console.log(movie.Genre)
         movieGenre.textContent = movie.Genre;
         output.setAttribute('class', 'show output');
 
        let splitgenre = movie.Genre.split(",");
+    
+       console.log(Object.keys(splitgenre).length)
        console.log(splitgenre);
 
        if (splitgenre[0] == "Documentary"){
@@ -56,6 +58,9 @@ $.ajax({
         }
         if (splitgenre[0] || splitgenre[1] || splitgenre[2] || splitgenre[3] || splitgenre[4] == "Sport"){
             recipeGenrePoints = recipeGenrePoints - 2 
+        }
+        if (Object.keys(splitgenre).length > 3){
+            recipeGenrePoints = recipeGenrePoints - 1  
         }
        console.log(recipeGenrePoints);
         
