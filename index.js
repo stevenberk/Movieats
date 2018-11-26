@@ -101,6 +101,10 @@ $.ajax({
                 recipeGenrePoints = recipeGenrePoints + 2 
                 console.log("thriller " + recipeGenrePoints)
             }
+            if (splitgenre[i] == "Sci-Fi"){
+                recipeGenrePoints = recipeGenrePoints - 1 
+                console.log("sciFi " + recipeGenrePoints)
+            }
        }
        console.log(splitgenre);
 
