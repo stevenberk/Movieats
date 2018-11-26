@@ -106,6 +106,18 @@ $.ajax({
                 console.log("sciFi " + recipeGenrePoints)
             }
        }
+       if (splitgenre.length > 3){
+           recipeGenrePoints = recipeGenrePoints - 5
+       }
+       if (splitgenre.length === 1){
+        recipeGenrePoints = recipeGenrePoints + 5
+        }
+        if (splitgenre.length === 2){
+            recipeGenrePoints = recipeGenrePoints + 3
+            }
+       if (recipeGenrePoints > 9){
+            console.log("greater than 9 recipe")
+       }
        console.log(splitgenre);
 
 
