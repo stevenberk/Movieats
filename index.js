@@ -29,8 +29,21 @@ $.ajax({
        let splitgenre = movie.Genre.split(",");
        for (let i = 0; i < splitgenre.length; i++){
            splitgenre[i] = splitgenre[i].trim()
+           if (splitgenre[i]  == "Crime"){
+                recipeGenrePoints = recipeGenrePoints + 5
+                console.log("crime loop " + recipeGenrePoints)
+            }
+            if (splitgenre[i] == "Biography"){
+                recipeGenrePoints = recipeGenrePoints + 5 
+                console.log("bio loop" + recipeGenrePoints)
+            }
        }
        console.log(splitgenre);
+
+    
+
+
+
 //index value 0
        if (splitgenre[0] == "Documentary"){
             recipeGenrePoints = recipeGenrePoints + 6
