@@ -34,11 +34,11 @@ $.ajax({
                 console.log("crime " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Biography"){
-                recipeGenrePoints = recipeGenrePoints + 5 
+                recipeGenrePoints = recipeGenrePoints + 6 
                 console.log("bio " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Documentary"){
-                recipeGenrePoints = recipeGenrePoints + 5
+                recipeGenrePoints = recipeGenrePoints + 6
                 console.log("doc " + recipeGenrePoints)
             }
             if (splitgenre[i]  == "Comedy"){
@@ -46,7 +46,7 @@ $.ajax({
                 console.log("comedy " + recipeGenrePoints)
             }
             if (splitgenre[i]  == "Drama"){
-                recipeGenrePoints = recipeGenrePoints + 5 
+                recipeGenrePoints = recipeGenrePoints + 6 
                 console.log("drama " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Animation"){
@@ -105,19 +105,18 @@ $.ajax({
                 recipeGenrePoints = recipeGenrePoints - 1 
                 console.log("sciFi " + recipeGenrePoints)
             }
-       
-       if (splitgenre.length > 3){
-           recipeGenrePoints = recipeGenrePoints - 3
-       }
-       if (splitgenre.length === 1){
-        recipeGenrePoints = recipeGenrePoints + 5
-        }
-        if (splitgenre.length === 2){
-            recipeGenrePoints = recipeGenrePoints + 3
+            if (splitgenre.length > 3){
+                recipeGenrePoints = recipeGenrePoints - 3
             }
-       if (recipeGenrePoints > 9){
-            console.log("greater than 9 recipe")
-       }
+            if (splitgenre.length === 1){
+                recipeGenrePoints = recipeGenrePoints + 5
+            }
+            if (splitgenre.length === 2){
+                recipeGenrePoints = recipeGenrePoints + 3
+            }
+            if (i + 1 >= splitgenre.length){
+                findRecipe();
+            }
     }
        console.log(splitgenre);
 
@@ -129,4 +128,8 @@ $.ajax({
         console.log(error)
     }
 })
+}
+
+let findRecipe = () => {
+    console.log("need to find receipe for " + recipeGenrePoints + " point movie");
 }
