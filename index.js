@@ -2,7 +2,7 @@ var output = document.querySelector(".output");
 var movieGenre = document.querySelector(".movie-genre");
 
 let recipeGenrePoints = 0;
-
+let movieTitle = " ";
 
 var form = document
   .querySelector(".form")
@@ -22,9 +22,10 @@ $.ajax({
     type: "GET",
     url: `http://www.omdbapi.com/?i=tt3896198&apikey=6c8e631&t=${value}`,
     success: function(movie){
-        // console.log(movie.Genre)
-        movieGenre.textContent = movie.Genre;
-        output.setAttribute('class', 'show output');
+        console.log(movie.Title)
+        movieTitle = movie.Title
+        // movieGenre.textContent = movie.Genre;
+        // output.setAttribute('class', 'show output');
    
        let splitgenre = movie.Genre.split(",");
        for (let i = 0; i < splitgenre.length; i++){
@@ -131,5 +132,8 @@ $.ajax({
 }
 
 let findRecipe = () => {
+    movieGenre.textContent = `Finding a recipe to pair with ${movieTitle}...`;
+    output.setAttribute('class', 'show output');
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
+    
 }
