@@ -4,6 +4,29 @@ var movieGenre = document.querySelector(".movie-genre");
 let recipeGenrePoints = 0;
 let movieTitle = " ";
 
+
+let recipeObject = {
+    0: {"dishName": "Saltine Crackers"},
+    1: {"dishName": "Saltine Crackers"},
+    2: {"dishName": "Saltine Crackers"},
+    3: {"dishName": "Saltine Crackers"},
+    4: {"dishName": "Saltine Crackers"},
+    5: {"dishName": "Saltine Crackers"},
+    6: {"dishName": "Saltine Crackers"},
+    7: {"dishName": "Saltine Crackers"},
+    8: {"dishName": "Saltine Crackers"},
+    9: {"dishName": "Saltine Crackers"},
+    10: {"dishName": "Saltine Crackers"},
+    12: {"dishName": "Saltine Crackers"},
+    13: {"dishName": "Saltine Crackers"},
+    14: {"dishName": "Saltine Crackers"},
+    15: {"dishName": "Broccoli Cheddar Soup"},
+    16: {"dishName": "Mushroom Stuffed Pork Tenderloins"},
+    17: {"dishName": "Frog Leg Soup"}
+}
+
+
+
 var form = document
   .querySelector(".form")
   .addEventListener("submit", function(e) {
@@ -135,5 +158,6 @@ let findRecipe = () => {
     movieGenre.textContent = `Finding a recipe to pair with ${movieTitle}...`;
     output.setAttribute('class', 'show output');
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
-    
+    console.log(recipeObject[recipeGenrePoints]);
+
 }
