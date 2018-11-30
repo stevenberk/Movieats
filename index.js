@@ -18,8 +18,8 @@ let recipeObject = {
     9: {"dishName": "Saltine Crackers"},
     10: {"dishName": "Saltine Crackers"},
     12: {"dishName": "Saltine Crackers"},
-    13: {"dishName": "Saltine Crackers"},
-    14: {"dishName": "Saltine Crackers"},
+    13: {"dishName": "Sauteed Kale"},
+    14: {"dishName": "Broiled salmon"},
     15: {"dishName": "Broccoli Cheddar Soup"},
     16: {"dishName": "Mushroom Stuffed Pork Tenderloins"},
     17: {"dishName": "Frog Leg Soup"}
