@@ -6,6 +6,7 @@ let movieTitle = " ";
 
 
 let recipeObject = {
+ 
     0: {"dishName": "Saltine Crackers"},
     1: {"dishName": "Saltine Crackers"},
     2: {"dishName": "Saltine Crackers"},
@@ -24,6 +25,7 @@ let recipeObject = {
     16: {"dishName": "Mushroom Stuffed Pork Tenderloins"},
     17: {"dishName": "Frog Leg Soup"}
 }
+
 
 
 
@@ -157,7 +159,13 @@ $.ajax({
 let findRecipe = () => {
     movieGenre.textContent = `Finding a recipe to pair with ${movieTitle}...`;
     output.setAttribute('class', 'show output');
+    
+    if (recipeGenrePoints < 0) {
+        console.log(recipeGenrePoints)
+    }else{
+        console.log(recipeObject[recipeGenrePoints].dishName);
+    }
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
-    console.log(recipeObject[recipeGenrePoints]);
+    
 
 }
