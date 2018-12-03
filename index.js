@@ -57,93 +57,95 @@ $.ajax({
            splitgenre[i] = splitgenre[i].trim()
             if (splitgenre[i]  == "Crime"){
                 recipeGenrePoints = recipeGenrePoints + 4
-                // console.log("crime " + recipeGenrePoints)
+                console.log("crime " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Biography"){
                 recipeGenrePoints = recipeGenrePoints + 10 
-                // console.log("bio " + recipeGenrePoints)
+                console.log("bio " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Documentary"){
                 recipeGenrePoints = recipeGenrePoints + 10
-                // console.log("doc " + recipeGenrePoints)
+                console.log("doc " + recipeGenrePoints)
             }
             if (splitgenre[i]  == "Comedy"){
                 recipeGenrePoints = recipeGenrePoints + 8 
-                // console.log("comedy " + recipeGenrePoints)
+                console.log("comedy " + recipeGenrePoints)
             }
             if (splitgenre[i]  == "Drama"){
                 recipeGenrePoints = recipeGenrePoints + 9 
-                // console.log("drama " + recipeGenrePoints)
+                console.log("drama " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Animation"){
                 recipeGenrePoints = recipeGenrePoints + 2 
-                // console.log("amination " + recipeGenrePoints)
+                console.log("amination " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Adventure"){
                 recipeGenrePoints = recipeGenrePoints + 2 
-                // console.log("adventure " + recipeGenrePoints)
+                console.log("adventure " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Romance"){
                 recipeGenrePoints = recipeGenrePoints + 7 
-                // console.log("romance " + recipeGenrePoints)
+                console.log("romance " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Action"){
                 recipeGenrePoints = recipeGenrePoints + 1 
-                // console.log("action " + recipeGenrePoints)
+                console.log("action " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Sport"){
                 recipeGenrePoints = recipeGenrePoints + 0 
-                // console.log("sport " + recipeGenrePoints)
+                console.log("sport " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Fantasy"){
                 recipeGenrePoints = recipeGenrePoints + 1 
-                // console.log("fantasy " + recipeGenrePoints)
+                console.log("fantasy " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Family"){
                 recipeGenrePoints = recipeGenrePoints + 1 
-                // console.log("family " + recipeGenrePoints)
+                console.log("family " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Short"){
                 recipeGenrePoints = recipeGenrePoints + 9 
-                // console.log("short " + recipeGenrePoints)
+                console.log("short " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Music"){
                 recipeGenrePoints = recipeGenrePoints + 8 
-                // console.log("music " + recipeGenrePoints)
+                console.log("music " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Western"){
                 recipeGenrePoints = recipeGenrePoints + 0 
-                // console.log("western " + recipeGenrePoints)
+                console.log("western " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Thriller"){
                 recipeGenrePoints = recipeGenrePoints + 1 
-                // console.log("thriller " + recipeGenrePoints)
+                console.log("thriller " + recipeGenrePoints)
             }
             if (splitgenre[i] == "War"){
                 recipeGenrePoints = recipeGenrePoints + 6 
-                // console.log("war " + recipeGenrePoints)
+                console.log("war " + recipeGenrePoints)
             }
             if (splitgenre[i] == "History"){
                 recipeGenrePoints = recipeGenrePoints + 8 
-                // console.log("thriller " + recipeGenrePoints)
+                console.log("thriller " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Sci-Fi"){
                 recipeGenrePoints = recipeGenrePoints + 1 
-                // console.log("sciFi " + recipeGenrePoints)
+                console.log("sciFi " + recipeGenrePoints)
             }
-            if (splitgenre.length > 3){
-                recipeGenrePoints = recipeGenrePoints - 3
-            }
-            if (splitgenre.length === 1){
-                recipeGenrePoints = recipeGenrePoints + 5
-            }
-            if (splitgenre.length === 2){
-                recipeGenrePoints = recipeGenrePoints + 3
-            }
+            // if (splitgenre.length > 3){
+            //     recipeGenrePoints = recipeGenrePoints - 3
+            // }
+            // if (splitgenre.length === 1){
+            //     recipeGenrePoints = recipeGenrePoints + 5
+            // }
+            // if (splitgenre.length === 2){
+            //     recipeGenrePoints = recipeGenrePoints + 3
+            // }
             if (i + 1 >= splitgenre.length){
                 findRecipe();
             }
     }
+
+    
     //    console.log(splitgenre);
 
 
@@ -160,12 +162,12 @@ let findRecipe = () => {
     movieGenre.textContent = `Finding a recipe to pair with ${movieTitle}...`;
     output.setAttribute('class', 'show output');
     
-    
+ 
         console.log(recipeGenrePoints);
     
-        console.log(recipeObject[recipeGenrePoints].dishName);
+        // console.log(recipeObject[recipeGenrePoints].dishName);
     
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
     
 
-}
+}   
