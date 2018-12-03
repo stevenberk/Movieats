@@ -8,8 +8,8 @@ let movieTitle = " ";
 let recipeObject = {
  
     0: {"dishName": "Saltine Crackers"},
-    1: {"dishName": "Saltine Crackers"},
-    2: {"dishName": "Saltine Crackers"},
+    1: {"dishName": "Sweet potato fries"},
+    2: {"dishName": "Gas station sushi"},
     3: {"dishName": "Saltine Crackers"},
     4: {"dishName": "Saltine Crackers"},
     5: {"dishName": "Saltine Crackers"},
@@ -161,7 +161,8 @@ let findRecipe = () => {
     output.setAttribute('class', 'show output');
     
     if (recipeGenrePoints < 0) {
-        console.log(recipeGenrePoints)
+        console.log(recipeGenrePoints);
+        
     }else{
         console.log(recipeObject[recipeGenrePoints].dishName);
     }
