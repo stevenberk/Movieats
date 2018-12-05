@@ -159,13 +159,13 @@ $.ajax({
 }
 
 let findRecipe = () => {
-    movieGenre.textContent = `Finding a recipe to pair with ${movieTitle}...`;
+    movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}`;
     output.setAttribute('class', 'show output');
     
  
         console.log(recipeGenrePoints);
     
-        // console.log(recipeObject[recipeGenrePoints].dishName);
+        console.log(recipeObject[recipeGenrePoints].dishName);
     
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
     
