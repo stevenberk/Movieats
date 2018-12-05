@@ -23,7 +23,18 @@ let recipeObject = {
     14: {"dishName": "Broiled salmon"},
     15: {"dishName": "Broccoli Cheddar Soup"},
     16: {"dishName": "Mushroom Stuffed Pork Tenderloins"},
-    17: {"dishName": "Frog Leg Soup"}
+    17: {"dishName": "Frog Leg Soup"},
+    18: {"dishName": "Sauteed Kale"},
+    19: {"dishName": "Broiled salmon"},
+    20: {"dishName": "Broccoli Cheddar Soup"},
+    21: {"dishName": "Mushroom Stuffed Pork Tenderloins"},
+    22: {"dishName": "Frog Leg Soup"},
+    23: {"dishName": "Frog Leg Soup"},
+    24: {"dishName": "Sauteed Kale"},
+    25: {"dishName": "Broiled salmon"},
+    26: {"dishName": "Broccoli Cheddar Soup"},
+    27: {"dishName": "Mushroom Stuffed Pork Tenderloins"},
+    28: {"dishName": "Frog Leg Soup"}
 }
 
 
