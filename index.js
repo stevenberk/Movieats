@@ -12,7 +12,7 @@ let recipeObject = {
     2: {"dishName": "Gas station sushi", "description": ""},
     3: {"dishName": "Saltine Crackers", "description": ""},
     4: {"dishName": "Saltine Crackers", "description": ""},
-    5: {"dishName": "Saltine Crackers", "description": ""},
+    5: {"dishName": "Meat and potatoes", "description": "You're way too simple"},
     6: {"dishName": "Saltine Crackers", "description": ""},
     7: {"dishName": "Saltine Crackers", "description": ""},
     8: {"dishName": "Saltine Crackers", "description": ""},
@@ -157,7 +157,7 @@ $.ajax({
 }
 
 let findRecipe = () => {
-    movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}`;
+    movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}. ${recipeObject[recipeGenrePoints].description}`;
     output.setAttribute('class', 'show output');
 
         if (numberOfGenres > 4){
