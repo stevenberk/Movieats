@@ -4,7 +4,7 @@ var movieGenre = document.querySelector(".movie-genre");
 let recipeGenrePoints = 0;
 let movieTitle = " ";
 
-
+let numberOfGenres = 0;
 let recipeObject = {
  
     0: {"dishName": "Saltine Crackers"},
@@ -64,7 +64,7 @@ $.ajax({
         // output.setAttribute('class', 'show output');
    
        let splitgenre = movie.Genre.split(",");
-       for (let i = 0; i < splitgenre.length; i++){
+       for (let i = 0; i < splitgenre.length; (i++, numberOfGenres++)){
            splitgenre[i] = splitgenre[i].trim()
             if (splitgenre[i]  == "Crime"){
                 recipeGenrePoints = recipeGenrePoints + 4
@@ -142,28 +142,13 @@ $.ajax({
                 recipeGenrePoints = recipeGenrePoints + 1 
                 console.log("sciFi " + recipeGenrePoints)
             }
-            //
-            // if (splitgenre.length > 3){
-            //     recipeGenrePoints = recipeGenrePoints - 3
-            // }
-            // if (splitgenre.length === 1){
-            //     recipeGenrePoints = recipeGenrePoints + 5
-            // }
-            // if (splitgenre.length === 2){
-            //     recipeGenrePoints = recipeGenrePoints + 3
-            // }
-            //
             if (i + 1 >= splitgenre.length){
+                console.log(numberOfGenres);
                 findRecipe();
             }
     }
 
-    
-    //    console.log(splitgenre);
-
-
-    //    console.log(recipeGenrePoints);
-        
+   
     },
     error: function(error){
         console.log(error)
@@ -174,12 +159,14 @@ $.ajax({
 let findRecipe = () => {
     movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}`;
     output.setAttribute('class', 'show output');
-    
- 
-        console.log(recipeGenrePoints);
-    
-        console.log(recipeObject[recipeGenrePoints].dishName);
-    
+
+    if (recipeGenrePoints > 5) {
+        if (numberOfGenres > 4){
+            recipeGenrePoints = recipeGenrePoints - 4;
+            console.log(recipeGenrePoints);
+        }
+    }
+
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
     
 
