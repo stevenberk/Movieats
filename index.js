@@ -71,7 +71,7 @@ $.ajax({
                 console.log("crime " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Biography"){
-                recipeGenrePoints = recipeGenrePoints + 10 
+                recipeGenrePoints = recipeGenrePoints + 8 
                 console.log("bio " + recipeGenrePoints)
             }
             if (splitgenre[i] == "Documentary"){
@@ -160,15 +160,16 @@ let findRecipe = () => {
     movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}`;
     output.setAttribute('class', 'show output');
 
-    if (recipeGenrePoints > 5) {
         if (numberOfGenres > 4){
             recipeGenrePoints = recipeGenrePoints - 8;
             console.log(recipeGenrePoints);
         }
-    }
-
         if (numberOfGenres < 2){
             recipeGenrePoints = recipeGenrePoints + 5;
+            console.log(recipeGenrePoints);
+        }
+        if (numberOfGenres < 3){
+            recipeGenrePoints = recipeGenrePoints + 3;
             console.log(recipeGenrePoints);
         }
     
