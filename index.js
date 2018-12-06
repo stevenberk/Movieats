@@ -7,9 +7,9 @@ let movieTitle = " ";
 let numberOfGenres = 1;
 let recipeObject = {
  
-    0: {"dishName": "Saltine Crackers"},
-    1: {"dishName": "Sweet potato fries"},
-    2: {"dishName": "Gas station sushi"},
+    0: {"dishName": "Saltine Crackers", "description": "A dish as bland as your taste in movies"},
+    1: {"dishName": "Sweet potato fries", "description": "Is it worth paying a little extra for"},
+    2: {"dishName": "Gas station sushi", "description": ""},
     3: {"dishName": "Saltine Crackers"},
     4: {"dishName": "Saltine Crackers"},
     5: {"dishName": "Saltine Crackers"},
