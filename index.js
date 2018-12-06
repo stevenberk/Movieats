@@ -4,7 +4,7 @@ var movieGenre = document.querySelector(".movie-genre");
 let recipeGenrePoints = 0;
 let movieTitle = " ";
 
-let numberOfGenres = 0;
+let numberOfGenres = 1;
 let recipeObject = {
  
     0: {"dishName": "Saltine Crackers"},
@@ -162,10 +162,16 @@ let findRecipe = () => {
 
     if (recipeGenrePoints > 5) {
         if (numberOfGenres > 4){
-            recipeGenrePoints = recipeGenrePoints - 4;
+            recipeGenrePoints = recipeGenrePoints - 8;
             console.log(recipeGenrePoints);
         }
     }
+
+        if (numberOfGenres < 2){
+            recipeGenrePoints = recipeGenrePoints + 5;
+            console.log(recipeGenrePoints);
+        }
+    
 
     console.log("need to find receipe for " + recipeGenrePoints + " point movie");
     
