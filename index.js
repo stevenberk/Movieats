@@ -157,7 +157,7 @@ $.ajax({
 }
 
 let findRecipe = () => {
-    movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}. ${recipeObject[recipeGenrePoints].description}`;
+    movieGenre.textContent = `${recipeObject[recipeGenrePoints].dishName} goes well with  ${movieTitle}. \n ${recipeObject[recipeGenrePoints].description}`;
     output.setAttribute('class', 'show output');
 
         if (numberOfGenres > 4){
