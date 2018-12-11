@@ -13,7 +13,7 @@ let recipeObject = {
     3: {"dishName": "Saltine Crackers", "description": ""},
     4: {"dishName": "Saltine Crackers", "description": ""},
     5: {"dishName": "Meat and potatoes", "description": "You're way too simple"},
-    6: {"dishName": "Saltine Crackers", "description": ""},
+    6: {"dishName": "Macaroni and cheese from a box", "description": ""},
     7: {"dishName": "Saltine Crackers", "description": ""},
     8: {"dishName": "Saltine Crackers", "description": ""},
     9: {"dishName": "ice cubes", "description": ""},
