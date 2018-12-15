@@ -8,11 +8,11 @@ let numberOfGenres = 1;
 let recipeObject = {
  
     0: {"dishName": "Saltine Crackers", "description": "A dish as bland as your taste in movies"},
-    1: {"dishName": "Sweet potato fries", "description": "Is it worth paying a little extra for"},
+    1: {"dishName": "Sweet potato fries", "description": "It's worth paying a little extra for"},
     2: {"dishName": "Gas station sushi", "description": ""},
     3: {"dishName": "Saltine Crackers", "description": ""},
     4: {"dishName": "Saltine Crackers", "description": ""},
-    5: {"dishName": "Meat and potatoes", "description": "You're way too simple"},
+    5: {"dishName": "Meat and potatoes", "description": ""},
     6: {"dishName": "Macaroni and cheese from a box", "description": ""},
     7: {"dishName": "Saltine Crackers", "description": ""},
     8: {"dishName": "Saltine Crackers", "description": ""},
